@@ -27,18 +27,13 @@ body {
 }
 
 .wrapper {
-  width: 100%;
+  width: 90%;
   max-width: 1280px;
-  margin: 0 20px;
+  margin: 0 auto;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
   font-family: "Open Sans", sans-serif;
-
-  @media screen and (min-width: $largeWidth) {
-    width: 90%;
-    margin: 0 auto;
-  }
 }
 
 /* web accessibility */
@@ -138,6 +133,7 @@ body {
 .navigation {
   width: 100%;
   height: 100vh;
+  background-color: $neutral1C;
   @include flex(column, center, space-between);
   visibility: hidden;
   transform: translateX(100%);
@@ -149,6 +145,7 @@ body {
 
   @media screen and (min-width: $largeWidth) {
     height: auto;
+    background-color: transparent;
     @include flex(row, center, space-between);
     visibility: visible;
     transform: translateX(0);
@@ -358,6 +355,11 @@ body {
 }
 
 /* section */
+
+.section, .main {
+  width: 100%;
+}
+
 .section__wrapper {
   @include flex(column, flex-start, flex-start);
 
@@ -445,6 +447,9 @@ body {
     }
   }
 }
+
+/* items */
+
 
 /* footer */
 
